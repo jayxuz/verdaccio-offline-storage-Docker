@@ -1,6 +1,6 @@
 # Verdaccio-offline-storage Docker Image
 
-[![docker pulls](https://img.shields.io/docker/pulls/jayxuz/verdaccio-offline-storage.svg?maxAge=43200)](https://hub.docker.com/r/jayxuz/verdaccio-offline-storage)
+[![docker pulls](https://img.shields.io/docker/pulls/jayxuz/verdaccio-offline-storage.svg)](https://hub.docker.com/r/jayxuz/verdaccio-offline-storage)
 [![docker pulls](https://img.shields.io/docker/image-size/jayxuz/verdaccio-offline-storage/latest)](https://hub.docker.com/r/jayxuz/verdaccio-offline-storage)
 ```bash
 docker pull jayxuz/verdaccio-offline-storage

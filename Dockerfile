@@ -1,4 +1,4 @@
-FROM verdaccio/verdaccio:latest
+FROM verdaccio/verdaccio:5.3.1
 USER root
 RUN npm -g i verdaccio-offline-storage && \
   ln -s /usr/local/lib/node_modules/verdaccio-offline-storage /verdaccio/plugins/verdaccio-offline-storage  && \
