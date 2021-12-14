@@ -9,22 +9,18 @@ on:
 
 jobs:
   build:
-    name: Build Spring Boot
+    name: Build verdacci offline-storage Docker Image
     runs-on: ubuntu-latest
     steps:
       - name: Git Checkout Code
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
         id: git_checkout
-      - name: Build Docker Image
+      - name: Build & push Docker image
+        uses: mr-smithers-excellent/docker-build-push@v5
         id: buildAndPushImage
-        uses: risfeng/docker-image-build-push-action@v1.0
         with:
-          registry_url: 'docker.io'
-          namespaces: 'jayxuz'
-          repository_name: 'verdaccio-offline-storage'
-          user_name: ${{ secrets.DOCKERHUB_USERNAME }}
+          image: jayxuz/verdaccio-offline-storage
+          tags: v1, latest
+          registry: docker.io
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          image_version: 'v1.0'
-          docker_file: '.'
-      - name: Get pre step result output image_pull_url
-        run: echo "The time was ${{ steps.buildAndPushImage.outputs.image_pull_url }}"
