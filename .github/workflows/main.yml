@@ -20,7 +20,7 @@ jobs:
         id: buildAndPushImage
         with:
           image: jayxuz/verdaccio-offline-storage
-          tags: v1, latest
+          tags: 5.3.1, latest
           registry: docker.io
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
