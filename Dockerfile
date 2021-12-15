@@ -5,6 +5,3 @@ RUN npm -g i verdaccio-offline-storage && \
   chown -R 10001 /usr/local/lib/node_modules/verdaccio-offline-storage && \
   chown -R 10001 /verdaccio/plugins
 USER verdaccio
-WORKDIR /verdaccio
-EXPOSE 4873
-VOLUME ["/verdaccio"]
