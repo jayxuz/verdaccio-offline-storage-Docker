@@ -68,7 +68,7 @@ docker run -it --rm --name verdaccio \
   -v $V_PATH/conf:/verdaccio/conf \
   -v $V_PATH/storage:/verdaccio/storage \
   -v $V_PATH/plugins:/verdaccio/plugins \
-  verdaccio/verdaccio
+  jayxuz/verdaccio-offline-storage
 ```
 enjoy your working offline environment.
 
